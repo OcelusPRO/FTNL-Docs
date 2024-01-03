@@ -1,0 +1,88 @@
+name: Build documentation
+
+on:
+  pull_request:
+    types:
+      - closed
+    branches: [ master, main ]
+
+  # Specify to run a workflow manually from the Actions tab on GitHub
+  workflow_dispatch:
+
+env:
+  # Name of module and id separated by a slash
+  INSTANCE: Writerside/hi
+  # Replace HI with the ID of the instance in capital letters
+  ARTIFACT: webHelpHI2-all.zip
+  # Writerside docker image version
+  DOCKER_VERSION: 232.10275
+
+jobs:
+  build:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Build Writerside docs using Docker
+        uses: JetBrains/writerside-github-action@v4
+        with:
+          instance: ${{ env.INSTANCE }}
+          artifact: ${{ env.ARTIFACT }}
+          docker-version: ${{ env.DOCKER_VERSION }}
+
+
+      - name: Upload documentation
+        uses: actions/upload-artifact@v3
+        with:
+          name: docs
+          path: |
+            artifacts/${{ env.ARTIFACT }}
+            artifacts/report.json
+          retention-days: 7
+
+
+  deploy:
+    if: github.event.pull_request.merged == true
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+        - name: Download artifacts
+          uses: actions/download-artifact@v1
+          with:
+            name: docs
+            path: artifacts
+
+        - uses: docker/login-action@v1
+          with:
+            registry: ${{ secrets.DOCKER_REGISTRY_URL }}
+            username: ${{ secrets.DOCKER_USERNAME}}
+            password: ${{ secrets.DOCKER_PASSWORD}}
+
+
+        - uses: actions/checkout@v3
+
+        - name: Build the Docker image
+          run: docker build . --file Dockerfile --tag ${{ vars.PROJECT_NAME }}
+
+        - name: Tag the Docker image with latest
+          run: docker tag ${{ vars.PROJECT_NAME }} ${{ secrets.DOCKER_REGISTRY_URL }}/${{ vars.PROJECT_NAME }}:latest
+        - name: Tag the Docker image with github sha
+          run: docker tag ${{ vars.PROJECT_NAME }} ${{ secrets.DOCKER_REGISTRY_URL }}/${{ vars.PROJECT_NAME }}:$GITHUB_SHA
+
+        - name: Push the latest Docker image
+          run: docker push ${{ secrets.DOCKER_REGISTRY_URL }}/${{ vars.PROJECT_NAME }}:latest
+
+        - name: Push the sha Docker image
+          run: docker push ${{ secrets.DOCKER_REGISTRY_URL }}/${{ vars.PROJECT_NAME }}:$GITHUB_SHA
+
+
+
+
+
+
+
+
+
+
