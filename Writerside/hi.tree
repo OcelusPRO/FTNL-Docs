@@ -3,11 +3,11 @@
         SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
 
 <instance-profile id="hi"
-                 name="Help Instance"
+                 name="FTNL"
                   start-page="FTNL-Legacy.md">
 
     <toc-element topic="FTNL-Legacy.md">
-        <toc-element topic="Comment-ajouté-ftnl-product-a-votre-serveur.md"/>
+        <toc-element topic="How-To-Add-FTNL-Legacy.md"/>
     </toc-element>
     <toc-element topic="FTNL-Translate.md">
         <toc-element topic="How-to-add-product.md"/>
