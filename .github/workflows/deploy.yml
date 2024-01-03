@@ -1,9 +1,7 @@
 name: Build documentation
 
 on:
-  pull_request:
-    types:
-      - closed
+  push:
     branches: [ master, main ]
 
   # Specify to run a workflow manually from the Actions tab on GitHub
