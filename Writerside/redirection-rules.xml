@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rules SYSTEM "https://resources.jetbrains.com/writerside/1.0/redirection-rules.dtd">
+<rules>
+    <!-- format is as follows
+    <rule id="<unique id>">
+        <accepts>page.html</accepts>
+    </rule>
+    -->
+    <rule id="c592f3f">
+        <description>Created after removal of "This is the first topic" from Help Instance</description>
+        <accepts>Default-topic.html</accepts>
+    </rule>
+    <rule id="554156cc">
+        <description>Created after removal of "Tutorial" from Help Instance</description>
+        <accepts>Tutorial.html</accepts>
+    </rule>
+    <rule id="5e1b104c">
+        <description>Created after removal of "Starter" from Help Instance</description>
+        <accepts>Starter.html</accepts>
+    </rule>
+    <rule id="299ba42e">
+        <description>Created after removal of "Reference" from Help Instance</description>
+        <accepts>Reference.html</accepts>
+    </rule>
+    <rule id="368819ec">
+        <description>Created after removal of "Overview" from Help Instance</description>
+        <accepts>Overview.html</accepts>
+    </rule>
+    <rule id="7bf05929">
+        <description>Created after removal of "Section Starting Page" from Help Instance</description>
+        <accepts>Section-Starting-Page.html</accepts>
+    </rule>
+    <rule id="489779c1">
+        <description>Created after removal of "How to" from Help Instance</description>
+        <accepts>How-to.html</accepts>
+    </rule>
+    <rule id="5bc73e86">
+        <description>Created after removal of "Section Starting Page" from Help Instance</description>
+        <accepts>Section-Starting-Page.html</accepts>
+    </rule>
+    <rule id="4ae0ef7">
+        <description>Created after removal of "Starter" from Help Instance</description>
+        <accepts>Starter.html</accepts>
+    </rule>
+</rules>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE instance-profile
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
+
+<instance-profile id="hi"
+                 name="Help Instance"
+                  start-page="FTNL-Translate.md">
+
+    <toc-element topic="FTNL-Translate.md">
+    </toc-element>
+    <toc-element topic="Tutoriels.md">
+        <toc-element topic="How-to-add-product.md"/>
+        <toc-element topic="Comment-configurer-une-langue.md"/>
+    </toc-element>
+    <toc-element topic="premium.md"/>
+</instance-profile>
