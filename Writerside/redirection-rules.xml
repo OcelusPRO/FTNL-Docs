@@ -42,4 +42,12 @@
         <description>Created after removal of "Starter" from Help Instance</description>
         <accepts>Starter.html</accepts>
     </rule>
+    <rule id="7d939b12">
+        <description>Created after removal of "Tutoriels" from Help Instance</description>
+        <accepts>Tutoriels.html</accepts>
+    </rule>
+    <rule id="657cc968">
+        <description>Created after removal of "FTNL" from Help Instance</description>
+        <accepts>FTNL.html</accepts>
+    </rule>
 </rules>

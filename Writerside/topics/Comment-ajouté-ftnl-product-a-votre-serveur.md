@@ -1,6 +1,6 @@
-# Comment ajouter %translate_product% a votre serveur discord
+# Comment ajouter %ftnl_product% a votre serveur discord
 
-Dans cette section, nous allons vous expliquer comment ajouter le bot a votre serveur discord 
+Dans cette section, nous allons vous expliquer comment ajouter le bot a votre serveur discord
 
 > **Information importante**
 >

@@ -1,24 +1,6 @@
 # Prémium
 
-Overview articles give background information and provide context to a particular subject.
-Their goal is to explain a concept, not to teach or give instructions.
+Les caractères prémiums constituent un moyen de continuer à traduire des messages même quand l'ensemble des 500 000 caractères
+gratuits ont été consommé par les utilisateurs du bot.
 
-## What is product/service/concept
-
-Provide some background and context, explain choices and alternatives.
-
-## Glossary
-
-A definition list or a glossary:
-
-First Term
-: This is the definition of the first term.
-
-Second Term
-: This is the definition of the second term.
-
-
-### Liste des langues prise en charge par les caractères prémiums :
-- a
-- b
-- c
+Vous pouvez en acheter sur le site [https://translate.ftnl.fr/](https://translate.ftnl.fr/)

@@ -4,13 +4,15 @@
 
 <instance-profile id="hi"
                  name="Help Instance"
-                  start-page="FTNL-Translate.md">
+                  start-page="FTNL-Legacy.md">
 
-    <toc-element topic="FTNL-Translate.md">
+    <toc-element topic="FTNL-Legacy.md">
+        <toc-element topic="Comment-ajouté-ftnl-product-a-votre-serveur.md"/>
     </toc-element>
-    <toc-element topic="Tutoriels.md">
+    <toc-element topic="FTNL-Translate.md">
         <toc-element topic="How-to-add-product.md"/>
         <toc-element topic="Comment-configurer-une-langue.md"/>
+        <toc-element topic="Comment-traduire-un-message.md"/>
+        <toc-element topic="premium.md"/>
     </toc-element>
-    <toc-element topic="premium.md"/>
 </instance-profile>
