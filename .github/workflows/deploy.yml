@@ -73,6 +73,10 @@ jobs:
         - name: Push the sha Docker image
           run: docker push ${{ secrets.DOCKER_REGISTRY_URL }}/${{ vars.PROJECT_NAME }}:$GITHUB_SHA
 
+        - uses: muinmomin/webhook-action@v1.0.0
+          with:
+            url: ${{ secrets.PORTAINER_WEBHOOK_URL }}
+
 
 
 
